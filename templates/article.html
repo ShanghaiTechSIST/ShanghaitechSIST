@@ -1,0 +1,24 @@
+{% extends "root_with_right_menu.html" %}
+{% load staticfiles %}
+{% load cms_tags sekizai_tags menu_tags %}
+
+{% block root_css %}
+	<link href="{% static "css/article.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block root_with_right_menu_body %}
+	<div class="row" id="article">
+		<div class="col-md-12" id="article-title">
+			<h2>
+				{% block article_title %}
+					{% page_attribute "page_title" %}
+				{% endblock %}
+			</h2>
+		</div>
+		<div class="col-md-12" id="article-content">
+			{% block article_content %}
+			{% placeholder 'article_content' %}
+			{% endblock %}
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% load menu_tags %}
+{% load sist_tags %}
+{% load cms_tags %}
+
+{% for child in children|slice:"-5:"|slice:"::-1" %}
+	{% if forloop.first %}
+		<div class="col-md-7" id="home-news-overview">
+			<div class="row clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+				<div class="home-news-overview-img" style="background-image:url(http://www.shanghaitech.edu.cn/upload/image/20160906/0946195735.jpg)"></div>
+				<h3>{{ child.get_menu_title }}</h3>
+			</div>
+		</div>
+		<div class="col-md-5" id="home-news-list">
+			<div class="row">
+	{% else %}
+		{% show_placeholder_as "article_content" child.id as article_content %}
+		<div class="col-md-12 home-news-block clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+			<h4>{{ child.get_menu_title }}</h4>
+		</div>
+	{% endif %}
+{% endfor %}
+	</div>
+</div>

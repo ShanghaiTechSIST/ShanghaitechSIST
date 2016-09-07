@@ -1,0 +1,183 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load cms_tags sekizai_tags menu_tags %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, minimum-scale=1, user-scalable=no, target-densitydpi=160dpi" />
+		<meta name="keywords" content="上海科技大学,信息科学与技术学院,ShanghaiTech University,School of Information Science and Technology,SIST,Shanghai,China,Chinese Academic of Sciences,Shanghai Pudong Science and Technology Park,Zhangjiang's high-tech industrial development zone,Shanghai Advanced Research Institute,site map,news,events,schools,information,web site,campus,library,admission,research,employment,university">
+		<meta name="description" content="Welcome to ShanghaiTech University The School of Information Science and Technology (SIST) home page, Students, Faculty, Staff, Partners, and the general public can use this site to find information on campus news, services, events, and resources posted on the campus web">
+
+		<title>{% page_attribute "page_title" %} - School of Information Science and Technology</title>
+		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+		<link href="{% static "css/common.css" %}" rel="stylesheet">
+		{% block root_css %}{% endblock %}
+
+		{% render_block "css" %}
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+				<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+				<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		{% cms_toolbar %}
+		<div class="container-fluid" id="top">
+			<div id="top-menu-container">
+				<div class="row-fluid">
+					<div class="col-md-12">
+						<div class="row-fluid">
+							<div class="col-md-12" id="top-menu">
+								<ul class="list-inline">
+									{% show_menu 0 0 1 100 "menu/root_menu.html" %}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col-md-12">
+					<div class="row-fluid">
+						<div class="col-md-12" id="top-menu-logo">
+							SIST @ ShanghaiTech
+						</div>
+						<div class="col-md-12" id="top-menu-btn">
+							<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+						</div>
+						<div class="col-md-12" id="top-logo">
+							<h1 id="university">
+								{% ifequal LANGUAGE_CODE 'zh' %}
+									上海科技大学
+								{% else %}
+									ShanghaiTech University
+								{% endifequal %}
+							</h1>
+							<h1 id="school">
+								{% ifequal LANGUAGE_CODE 'zh' %}
+									信息科学与技术学院
+								{% else %}
+									School of Information Science and Technology
+								{% endifequal %}
+							</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% block root_body %}{% endblock %}
+
+		<div id="contactInfo">
+			<div class="container">
+			{% ifequal LANGUAGE_CODE 'zh' %}
+				<div class="row">
+					<div class="col-md-12 contactInfo-body">
+						<div class="col-md-5 info-left">
+							<div class="info-content">
+								<span>Gelleris</span>
+							</div>
+						</div>
+						<div class="col-md-2 info-mid">
+						</div>
+						<div class="col-md-5 info-right">
+							<div class="contact-info">
+								<h3>Contact Us</h3>
+								<div class="contact-info-hr"><hr></div>
+								<div class="contact-info-item"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp;+86-21-54201291</div>
+								<div class="contact-info-item"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Xueying@shanghaitech.edu.cn</div>
+								<div class="contact-info-item"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;319 Yueyang Road, Shanghai 200031, China</div>
+								<div class="contact-info-item"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;100 Haike Road, Pudong, Shanghai 201210, China</div>
+							</div>
+
+							<div class="social-info">
+								<h3>Social Media</h3>
+								<div class="contact-info-hr"><hr></div>
+								<div class="contact-info-item">
+									<a href="[full link to Twitter]">
+										<img title="Twitter" alt="Twitter" src="/static/image/twitter1.png"/>
+									</a>
+									<a href="[full link to LinedIN]">
+										<img title="LinedIN" alt="LinedIN" src="/static/image/linkedin1.png"/>
+									</a>
+									<a href="[full link to Facebook]">
+										<img title="Facebook" alt="Facebook" src="/static/image/facebook1.png"/>
+									</a>
+									<a href="[full link to Rss]">
+										<img title="Rss" alt="Rss" src="/static/image/rss1.png"/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% else %}
+				<div class="row">
+					<div class="col-md-12 contactInfo-body">
+						<div class="col-md-5 info-left">
+							<div class="info-content">
+								<span>Gelleris</span>
+							</div>
+						</div>
+						<div class="col-md-2 info-mid">
+						</div>
+						<div class="col-md-5 info-right">
+							<div class="contact-info">
+								<h3>Contact Us</h3>
+								<div class="contact-info-hr"><hr></div>
+								<div class="contact-info-item"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp;+86-21-54201291</div>
+								<div class="contact-info-item"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Xueying@shanghaitech.edu.cn</div>
+								<div class="contact-info-item"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;319 Yueyang Road, Shanghai 200031, China</div>
+								<div class="contact-info-item"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;100 Haike Road, Pudong, Shanghai 201210, China</div>
+							</div>
+
+							<div class="social-info">
+								<h3>Social Media</h3>
+								<div class="contact-info-hr"><hr></div>
+								<div class="contact-info-item">
+									<a href="[full link to Twitter]">
+										<img title="Twitter" alt="Twitter" src="/static/image/twitter1.png"/>
+									</a>
+									<a href="[full link to LinedIN]">
+										<img title="LinedIN" alt="LinedIN" src="/static/image/linkedin1.png"/>
+									</a>
+									<a href="[full link to Facebook]">
+										<img title="Facebook" alt="Facebook" src="/static/image/facebook1.png"/>
+									</a>
+									<a href="[full link to Rss]">
+										<img title="Rss" alt="Rss" src="/static/image/rss1.png"/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endifequal %}
+			</div>
+		</div>
+		<div id="footer">
+			<div class="container">
+			{% ifequal LANGUAGE_CODE 'zh' %}
+				{% else %}
+				<div class="row">
+					<div class="col-md-12 footer-end">
+						<span><br class="visible-xs-block" /> Copyright © 2016 ShanghaiTech University · All rights reserved </span>
+					</div>
+				</div>
+			{% endifequal %}
+			</div>
+		</div>
+		<script src="{% static "js/jquery-2.1.4.min.js" %}"></script>
+		<script src="{% static "js/bootstrap.min.js" %}"></script>
+		<script src="{% static "js/common.js" %}"></script>
+		{% block root_js %}{% endblock %}
+		{% render_block "js" %}
+	</body>
+</html>

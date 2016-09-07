@@ -1,0 +1,113 @@
+/*
+* @Author: eastpiger
+* @Date:   2015-11-05 15:58:41
+* @Last Modified by:   eastpiger
+* @Last Modified time: 2016-06-22 03:13:43
+*/
+#list{
+	margin-bottom: 60px;
+}
+#list-title h2{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-style: italic;
+}
+.list-block > a{
+	color: #333333;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+.list-block > a:hover{
+	text-decoration: none;
+}
+.list-block{
+	padding: 10px;
+	border-bottom: #EEEEEE solid 1px;
+	transition: all .3s;
+}
+.list-block:hover{
+	background-color: #EEEEEE;
+	cursor: pointer;
+}
+
+.list-block-news{
+	padding: 5px 10px 10px 10px;
+	border-bottom: #EEEEEE solid 1px;
+}
+.list-block-news:hover{
+	background-color: #EEEEEE;
+	cursor: pointer;
+}
+.list-block-news h4{
+	padding: 12px 0px;
+    font-size: 20px;
+}
+.list-block-news:hover h4{
+	color: #004098;
+}
+.list-block-news:nth-last-child(1){
+	border-bottom: none;
+}
+
+.list-block-seminars:hover .list-seminars-time,
+.list-block-seminars:hover .list-seminars-time span{
+	color: #004098;
+	border-color: #004098;
+}
+.list-seminars-time > span{
+	font-size: 16px;
+	font-weight: bold;
+}
+.list-seminars-time > span > span{
+	margin-top: 0px;
+	border-top: 1px solid #777777;
+	color: #777777;
+}
+.list-seminars-title-speaker{
+	color: #777777;
+}
+
+.list-block-people{
+}
+.list-block-people .list-block-people-photo{
+	padding-right: 0px;
+}
+.list-block-people .list-block-people-photo img{
+	width: 100%;
+	height: auto;
+}
+
+
+.list-block-overview{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.list-block-overview:hover{
+	background: transparent;
+}
+.list-block-overview:hover a{
+	text-decoration: underline;
+}
+.list-block-overview-inner{
+	border-bottom: none;
+	padding-left: 40px;
+}
+.list-block-overview-inner span{
+	font-size: 8px;
+}
+
+.list-block-more{
+	font-size: 20px;
+	border-bottom: 0px;
+}
+
+.list-block-overview-people-inner{
+}
+.list-block-overview-people-inner .list-block-people-photo{
+	padding-right: 0px;
+}
+.list-block-overview-people-inner .list-block-people-photo img{
+	width: 100%;
+	height: auto;
+}

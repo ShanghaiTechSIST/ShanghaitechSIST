@@ -1,0 +1,26 @@
+{% load menu_tags %}
+{% load sist_tags %}
+
+{% for child in children|slice:":10" %}
+{% show_placeholder_as "people_name" child.id as people_name %}
+{% show_placeholder_as "people_photo" child.id as people_photo %}
+{% show_placeholder_as "people_profile" child.id as people_profile %}
+{% show_placeholder_as "people_brefintro" child.id as people_brefintro %}
+	<div class="col-md-12 list-block list-block-overview-inner list-block-overview-people-inner clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+		<!-- <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>&nbsp;&nbsp;{{ child.get_menu_title }} -->
+		<div class="row">
+			<div class="col-xs-12"><h4>{{ people_name }}</h4></div>
+			<div class="col-xs-2 list-block-people-photo">
+				{{ people_photo }}
+			</div>
+			<div class="col-xs-10">
+				{{ people_brefintro }}
+			</div>
+		</div>
+	</div>
+{% endfor %}
+{% if children|length > 10 %}
+<div class="col-md-12 list-block list-block-more text-center clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+	… More …
+</div>
+{% endif %}

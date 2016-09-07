@@ -1,0 +1,21 @@
+{% extends "menu/list_menu.html" %}
+{% load menu_tags %}
+{% load sist_tags %}
+
+{% block list_body %}
+{% show_placeholder_as "people_name" child.id as people_name %}
+{% show_placeholder_as "people_photo" child.id as people_photo %}
+{% show_placeholder_as "people_profile" child.id as people_profile %}
+{% show_placeholder_as "people_brefintro" child.id as people_brefintro %}
+<div class="col-md-12 list-block list-block-people clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+	<div class="row">
+		<div class="col-xs-12"><h4>{{ people_name }}</h4></div>
+		<div class="col-xs-2 list-block-people-photo">
+			{{ people_photo }}
+		</div>
+		<div class="col-xs-10">
+			{{ people_brefintro }}
+		</div>
+	</div>
+</div>
+{% endblock %}

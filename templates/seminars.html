@@ -1,0 +1,16 @@
+{% extends "article.html" %}
+{% load staticfiles %}
+{% load cms_tags sekizai_tags menu_tags %}
+
+{% block root_css %}
+	{{ block.super }}
+	<link href="{% static "css/seminars.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block article_content %}
+	<p><strong>Speaker: </strong>{% placeholder 'seminars_speaker' %}</p>
+	<p><strong>Time: </strong>{% placeholder 'seminars_timerange' %}</p>
+	<p><strong>Location: </strong>{% placeholder 'seminars_location' %}</p>
+	<hr/>
+	{% placeholder 'seminars_content' %}
+{% endblock %}

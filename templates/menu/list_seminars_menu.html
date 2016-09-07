@@ -1,0 +1,21 @@
+{% extends "menu/list_menu.html" %}
+{% load menu_tags %}
+{% load sist_tags %}
+
+{% block list_body %}
+{% show_placeholder_as "seminars_timerange" child.id as seminars_timerange %}
+{% show_placeholder_as "seminars_speaker" child.id as seminars_speaker %}
+<div class="col-md-12 list-block list-block-seminars clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+	<div class="row">
+		<div class="col-xs-3 col-md-2 text-center list-seminars-time">
+			<span>{{ seminars_timerange | striptags | slice:"::-1" | truncatewords:2 | slice:"::-1" | truncatewords:2 | slice:"3:-4" | cut:" " }}<br>
+				<span>{{ seminars_timerange | striptags | slice:"::-1" | truncatewords:1 | slice:"::-1" | slice:"3:" |  cut:" " }}</span>
+			</span>
+		</div>
+		<div class="col-xs-9 col-md-10 list-seminars-title">
+			{{ child.get_menu_title }}
+			<p class="text-right list-seminars-title-speaker">by {{ seminars_speaker }}</p>
+		</div>
+	</div>
+</div>
+{% endblock %}

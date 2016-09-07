@@ -1,0 +1,32 @@
+{% load menu_tags %}
+{% load sist_tags %}
+
+{% Paginate request children|slice:"::-1" maxitem 5 as children %}
+
+{% for child in children.containerP %}
+	{% block list_body %}
+	<div class="col-md-12 list-block clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+		{{ child.get_menu_title }}
+	</div>
+	{% endblock %}
+{% endfor %}
+
+<div class="col-md-12 list-menu text-center">
+	<nav>
+		<ul class="pagination pagination-sm">
+			<li {% if not children.attr.previous %}class="disabled"{% endif %}>
+				<a href="?{{ children.attr.key }}={{ children.attr.currectpage | add:"-1" }}">
+					<span aria-hidden="true">&laquo; Previous</span>
+				</a>
+			</li>
+			{% for page in children.attr.page %}
+			<li {% if page.currectpage %}class="active"{% endif %}><a href="?{{ children.attr.key }}={{ page.id }}">{{ page.id }}</a></li>
+			{% endfor %}
+			<li {% if not children.attr.next %}class="disabled"{% endif %}>
+				<a href="?{{ children.attr.key }}={{ children.attr.currectpage | add:"1" }}">
+					<span aria-hidden="true">Next &raquo;</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>

@@ -1,0 +1,11 @@
+{% extends "menu/list_menu.html" %}
+{% load menu_tags %}
+{% load sist_tags %}
+
+{% block list_body %}
+{% show_placeholder_as "article_content" child.id as article_content %}
+<div class="col-md-12 list-block list-block-news clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+	<h4>{{ child.get_menu_title }}</h4>
+	<p>{{ article_content | striptags | truncatechars:400 }}</p>
+</div>
+{% endblock %}

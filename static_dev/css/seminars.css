@@ -1,0 +1,11 @@
+/*
+* @Author: eastpiger
+* @Date:   2015-11-05 15:58:41
+* @Last Modified by:   eastpiger
+* @Last Modified time: 2015-12-23 01:03:21
+*/
+#article-content > p > strong{
+	width: 100px;
+    display: inline-block;
+}
+

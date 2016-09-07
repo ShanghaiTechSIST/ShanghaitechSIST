@@ -1,0 +1,30 @@
+{% extends "article.html" %}
+{% load staticfiles %}
+{% load cms_tags sekizai_tags menu_tags %}
+
+{% block root_css %}
+	{{ block.super }}
+	<link href="{% static "css/people.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block article_title %}
+	{% placeholder 'people_name' %}
+{% endblock %}
+
+{% block article_content %}
+	<div class="row" id="people">
+		<div class="col-md-3">
+			{% placeholder 'people_photo' %}
+		</div>
+		<div class="col-md-9">
+			{% placeholder 'people_profile' %}
+		</div>
+	</div>
+	<hr/>
+		<div id="people_brefintro" class="{% if request.toolbar.edit_mode %}edit_mode{% endif %}">
+			<h5>bref introduction</h5>
+			<hr/>
+			{% placeholder 'people_brefintro' %}
+		</div>
+	{% placeholder 'people_content' %}
+{% endblock %}

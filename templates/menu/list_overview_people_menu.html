@@ -1,0 +1,10 @@
+{% load menu_tags %}
+{% load sist_tags %}
+
+{% for child in children %}
+	<div class="col-md-12 list-block list-block-overview clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+		<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;{{ child.get_menu_title }}
+		<a class="pull-right">More…</a>
+	</div>
+	{% show_menu from_level to_level extra_inactive extra_active "menu/list_overview_inner_people_menu.html" "" "" child %}
+{% endfor %}

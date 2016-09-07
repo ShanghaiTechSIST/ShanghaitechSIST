@@ -1,0 +1,8 @@
+{% load menu_tags %}
+{% load sist_tags %}
+
+{% for child in children|slice:"-5:"|slice:"::-1" %}
+	<div class="col-md-12 list-block list-block-overview-inner clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+		<span class="glyphicon glyphicon-stop" aria-hidden="true"></span>&nbsp;&nbsp;{{ child.get_menu_title }}
+	</div>
+{% endfor %}

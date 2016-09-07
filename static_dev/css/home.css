@@ -1,0 +1,235 @@
+/*
+* @Author: eastpiger
+* @Date:   2015-11-05 15:58:41
+* @Last Modified by:   eastpiger
+* @Last Modified time: 2016-01-26 21:00:47
+*/
+body{
+	background-position: 0px 450px;
+}
+#top{
+	height: 450px;
+}
+#top-logo #school{
+	display: none;
+}
+#home-introducation{
+	background: #EEEEEE;
+	padding-bottom: 60px;
+}
+#home-introducation .row{
+	margin-top: -80px;
+	width: 80%;
+	margin-left: 20%;
+	border-radius: 2px;
+}
+#home-introducation .container{
+	position: relative;
+}
+#home-introducation-about{
+	position: absolute;
+	left: 0px;
+	margin: 0px;
+	bottom: -40px;
+	color: #cacaca;
+	font-size: 110px;
+	font-style: italic;
+	transition: all .3s;
+}
+#home-introducation:hover #home-introducation-about{
+	left: -20px;
+}
+#home-introducation-title{
+	height: 80px;
+  width: 100%;
+  padding: 0px 30px;
+  line-height: 70px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+	transition: all .3s;
+}
+#home-introducation-body{
+	padding: 20px 30px 0px 30px;
+  background: rgba(249, 249, 249, 0.6);
+	transition: all .3s;
+}
+#home-introducation-more{
+	padding: 0px 30px 20px 30px;
+  background: rgba(249, 249, 249, 0.6);
+	transition: all .3s;
+}
+#home-introducation .row:hover #home-introducation-title{
+  background: rgba(0, 0, 0, 0.5);
+}
+#home-introducation .row:hover #home-introducation-body{
+	background: rgba(249, 249, 249, 0.8);
+}
+#home-introducation .row:hover #home-introducation-more{
+	background: rgba(249, 249, 249, 0.8);
+}
+#home-introducation p{
+	color: #333333;
+	font-size: 16px;
+	line-height: 24px;
+}
+#home-news {
+	padding: 60px 0px;
+}
+#home-news .container{
+	position: relative;
+}
+#home-news-news{
+	position: absolute;
+	right: 0px;
+	margin: 0px;
+	bottom: -60px;
+	color: #cacaca;
+	font-size: 110px;
+	font-style: italic;
+	transition: all .3s;
+}
+#home-news:hover #home-news-news{
+	right: -20px;
+}
+#home-news-overview{
+	transition: all .3s;
+}
+#home-news-overview:hover{
+	cursor: pointer;
+}
+#home-news-overview h3{
+	padding: 20px;
+	margin-top: -64px;
+	height: 64px;
+	overflow: hidden;
+	background: rgba(0, 64, 152, 0.6);
+	color: white;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	transition: all .3s;
+}
+#home-news-overview:hover h3{
+	padding: 25px 20px;
+	margin-top: -90px;
+	height: 90px;
+}
+#home-news-overview .home-news-overview-img{
+	width: 100%;
+	height: 400px;
+	background-size: contain;
+	background: no-repeat center center;
+}
+.home-news-block  a{
+	color: #333333;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+.home-news-block > a:hover{
+	text-decoration: none;
+}
+.home-news-block{
+	height: 100px;
+	padding: 0px 10px 10px 30px;
+	background-color: rgba(0, 0, 0, 0.02);
+	transition: all .3s;
+}
+.home-news-block:hover{
+	width: 103%;
+	background-color: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+.home-news-block h4{
+	padding: 12px 0px;
+  font-size: 20px;
+	font-weight: 400;
+}
+.home-news-block:hover h4{
+	color: #004098;
+}
+.home-news-block:nth-last-child(1){
+	border-bottom: none;
+}
+#home-seminars{
+	background: #EEEEEE;
+	margin: 60px 0px;
+	position: relative;
+}
+#home-seminars-bg{
+	background: url("/static/image/bg_seminars.jpg") no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 180px;
+}
+#home-seminars .container{
+	position: relative;
+}
+#home-seminars-seminars{
+	position: absolute;
+	left: 0px;
+	margin: 0px;
+	bottom: 50px;
+	color: #cacaca;
+	font-size: 110px;
+	font-style: italic;
+	transition: all .3s;
+}
+#home-seminars:hover #home-seminars-seminars{
+	left: -20px;
+}
+#home-seminars-list{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.home-seminars-block > a{
+	color: #333333;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+.home-seminars-block > a:hover{
+	text-decoration: none;
+}
+.home-seminars-block{
+	padding: 20px;
+	transition: all .3s;
+	background: rgba(249, 249, 249, 0.8);
+}
+.home-seminars-block:hover{
+	cursor: pointer;
+	background: rgba(249, 249, 249, 0.9);
+	margin-left: 10px;
+}
+.home-seminars-block:hover .home-seminars-time,
+.home-seminars-block:hover .home-seminars-time span{
+	color: #004098;
+	border-color: #004098;
+}
+.home-seminars-time > span{
+	font-size: 16px;
+	font-weight: bold;
+}
+.home-seminars-time > span > span{
+	margin-top: 0px;
+	border-top: 1px solid #777777;
+	color: #777777;
+}
+.home-seminars-title-speaker{
+	color: #777777;
+}
+
+@media (max-width: 767px) {
+	#top{
+		height: 350px;
+	}
+	#top-logo{
+	    text-shadow: 0px 3px 5px rgb(0, 0, 0);
+	    position: absolute;
+	    top: 80px;
+	    text-align: center;
+	}
+}

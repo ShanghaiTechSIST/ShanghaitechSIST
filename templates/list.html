@@ -1,0 +1,18 @@
+{% extends "root_with_right_menu.html" %}
+{% load staticfiles %}
+{% load cms_tags sekizai_tags menu_tags %}
+
+{% block root_css %}
+	<link href="{% static "css/list.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block root_with_right_menu_body %}
+	<div class="row" id="list">
+		<div class="col-md-12" id="list-title">
+			<h2>{% page_attribute "page_title" %}</h2>
+		</div>
+		{% block list_body %}
+		{% show_sub_menu 1 None 1 "menu/list_menu.html" %}
+		{% endblock %}
+	</div>
+{% endblock %}

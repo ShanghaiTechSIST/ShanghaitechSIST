@@ -1,0 +1,16 @@
+/*
+* @Author: eastpiger
+* @Date:   2015-11-05 15:58:41
+* @Last Modified by:   eastpiger
+* @Last Modified time: 2016-06-22 02:44:51
+*/
+#people_brefintro{
+	display: none;
+}
+#people_brefintro.edit_mode{
+	display: block;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 10px;
+	margin: 10px;
+}
