@@ -1,7 +1,7 @@
 {% load menu_tags %}
 {% load sist_tags %}
 
-{% Paginate request children|slice:"::-1" maxitem 5 as children %}
+{% Paginate request children|slice:"::-1" maxitem 20 as children %}
 
 {% for child in children.containerP %}
 	{% block list_body %}
