@@ -1,7 +1,7 @@
 python3 makeconf.py > /shanghaitechSIST/shanghaitech_SIST/CONFIG.py
 
 # python3 manage.py createcachetable
-python3 manage.py makemigrations
+# python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py collectstatic --noinput
 
