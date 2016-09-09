@@ -4,3 +4,11 @@
 *.sublime-workspace
 
 .DS_Store
+
+__pycache__/*
+
+/static/*
+
+/media/*
+
+CONFIG.py
