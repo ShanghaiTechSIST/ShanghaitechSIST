@@ -6,6 +6,7 @@
 */
 body{
 	background-position: 0px 450px;
+	overflow-x: hidden;
 }
 #top{
 	height: 450px;
@@ -15,7 +16,7 @@ body{
 }
 #home-introducation{
 	background: #EEEEEE;
-	padding-bottom: 60px;
+	padding: 0px 0px 60px 0px;
 }
 #home-introducation .row{
 	margin-top: -80px;
@@ -75,6 +76,7 @@ body{
 }
 #home-news {
 	padding: 60px 0px;
+	margin-bottom: 60px;
 }
 #home-news .container{
 	position: relative;
@@ -100,7 +102,7 @@ body{
 }
 #home-news-overview h3{
 	padding: 20px;
-	margin-top: -64px;
+	margin: -64px 0px 0px 0px;
 	height: 64px;
 	overflow: hidden;
 	background: rgba(0, 64, 152, 0.6);
@@ -153,7 +155,7 @@ body{
 }
 #home-seminars{
 	background: #EEEEEE;
-	margin: 60px 0px;
+	padding: 60px 0px;
 	position: relative;
 }
 #home-seminars-bg{
@@ -172,7 +174,7 @@ body{
 	position: absolute;
 	left: 0px;
 	margin: 0px;
-	bottom: 50px;
+	bottom: 0px;
 	color: #cacaca;
 	font-size: 110px;
 	font-style: italic;
@@ -222,14 +224,47 @@ body{
 	color: #777777;
 }
 
-@media (max-width: 767px) {
-	#top{
-		height: 350px;
+@media (max-width: 1199px) {
+	#home-introducation-title h1{
+		font-size: 30px;
 	}
-	#top-logo{
-	    text-shadow: 0px 3px 5px rgb(0, 0, 0);
-	    position: absolute;
-	    top: 80px;
-	    text-align: center;
+}
+@media (max-width: 991px) {
+	#home-introducation .row{
+    margin-left: -15px;
+    width: auto;
+	}
+	#home-news-overview .home-news-overview-img{
+		height: 300px;
+	}
+	.home-news-block:hover{
+		width: 100%;
+	}
+	.home-seminars-block:hover{
+		margin-left: 0px;
+	}
+}
+
+@media (max-width: 767px) {
+	#home-introducation-title h1{
+		font-size: 24px;
+	}
+	#home-seminars-bg{
+		bottom: 380px;
+	}
+	.home-news-block h4{
+		font-size: 16px;
+	}
+	.home-news-block {
+	    height: 80px;
+	}
+	#home-introducation-about{
+		font-size: 80px;
+	}
+	#home-news-news{
+		font-size: 80px;
+	}
+	#home-seminars-seminars{
+		font-size: 80px;
 	}
 }

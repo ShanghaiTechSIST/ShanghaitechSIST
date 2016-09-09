@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load sist_tags %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+
+{% if photo.check_if_video %}
+  {% ifequal LANGUAGE_CODE 'zh' %}
+    {% set video = photo.get_video_object_zh %}
+  {% else %}
+    {% set video = photo.get_video_object_en %}
+  {% endifequal %}
+{% endif %}
+
+{% endif %}
+<img src="{{ im.url }}"
+  alt="{{ photo.title }}"
+  data-image="{{ photo.image.url }}"
+{% if photo.description %}
+  data-description="{{ photo.description }}"
+{% endif %}
+{% if video.type == 'html5' %}
+  data-type="html5video"
+  data-videomp4="{{ video.video }}"
+{% endif %}
+{% if video.type == 'youtube' %}
+  data-type="youtube"
+  data-videoid="{{ video.video }}"
+{% endif %}
+  class="unitegallery-photo {% if photo.custom_classes %} {{ photo.custom_classes }}{% endif %}"
+>

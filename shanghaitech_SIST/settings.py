@@ -51,8 +51,12 @@ INSTALLED_APPS = (
     'djangocms_file',
     'djangocms_timerange',
     'djangocms_plaintext',
-    'gunicorn',
+    'easy_thumbnails',
+    'djangocms_unitegallery',
+
     'shanghaitech_SIST',
+
+    'gunicorn',
 
     'django.contrib.admin',
 )
@@ -183,7 +187,7 @@ CMS_CACHE_DURATIONS = {
 CMS_PLACEHOLDER_CONF = {
     'article.html article_content': {
         'name' : 'article_content',
-        'plugins': ['TextPlugin'],
+        'plugins': ['GalleryPlugin, TextPlugin'],
         'default_plugins':[
             {
                 'plugin_type':'TextPlugin',

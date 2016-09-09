@@ -14,7 +14,7 @@
 			<div class="container">
 				<h1 id="home-introducation-about">{% page_attribute "page_title" "about" %}</h1>
 				<div class="row">
-					<div class="col-md-12" id="home-introducation-title">
+					<div class="col-xs-12" id="home-introducation-title">
 						<h1>
 							{% ifequal LANGUAGE_CODE 'zh' %}
 								信息科学与技术学院
@@ -23,10 +23,10 @@
 							{% endifequal %}
 						</h1>
 					</div>
-					<div class="col-md-12" id="home-introducation-body">
+					<div class="col-xs-12" id="home-introducation-body">
 						<p>{% static_placeholder 'school-introducation' %}</p>
 					</div>
-					<div class="col-md-12 subtitle text-right" id="home-introducation-more">
+					<div class="col-xs-12 subtitle text-right" id="home-introducation-more">
 						<a href="{% page_url "about" %}"><small>More…</small></a>
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 			<div class="container">
 				<h1 id="home-news-news">{% page_attribute "page_title" "news" %}</h1>
 				<div class="row">
-					<div class="col-md-12 subtitle text-right">
+					<div class="col-xs-12 subtitle text-right">
 						<a href="{% page_url "news" %}"><small>More News…</small></a>
 					</div>
 					{% show_menu_below_id 'news' 0 0 0 0 "menu/home_news_menu.html" %}
@@ -48,10 +48,10 @@
 			<div class="container">
 				<h1 id="home-seminars-seminars">{% page_attribute "page_title" "seminars" %}</h1>
 				<div class="row">
-					<div class="col-md-6 col-md-offset-6" id="home-seminars-list">
+					<div class="col-md-8 col-md-offset-4 col-lg-6 col-lg-offset-6" id="home-seminars-list">
 						<div class="row">
 							{% show_menu_below_id 'seminars' 0 0 1 6 "menu/home_seminars_menu.html" %}
-							<div class="col-md-12 subtitle text-right">
+							<div class="col-xs-12 subtitle text-right">
 								<a href="{% page_url "seminars" %}"><small>More Seminars…</small></a>
 							</div>
 						</div>

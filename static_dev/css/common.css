@@ -6,7 +6,7 @@
 */
 @import url(https://fonts.googleapis.com/css?family=Lato);
 *{
-	font-weight: 200;
+	/*font-weight: 200;*/
 	font-family:
 		-apple-system,            // OSX ^10.11 & iOS ^9  San Francisco & 苹方
 
@@ -39,8 +39,9 @@ a:hover{
 	cursor: pointer;
 }
 body{
-	background: #FAFAFA url("/static/image/bg_mark.jpg") top center no-repeat;
+	background: #FAFAFA;
 	background-size: contain;
+  transition: all .3s;
 }
 .subtitle a{
 	font-size: 30px;
@@ -61,11 +62,12 @@ body{
 	background: url("/static/image/bg_up.png") center center no-repeat,
 		url("/static/image/bg.jpg") center center no-repeat;
 	background-size: cover;
+	position: relative;
 }
 #top-menu-container {
 	background: rgba(0, 0, 0, 0.1);
 	position: absolute;
-	top: 6px;
+	top: 0px;
 	left: 0px;
 	right: 0px;
 	height: 60px;
@@ -123,15 +125,17 @@ body{
 	margin: 0px;
   display: inline-block;
 	line-height: 30px;
-	padding: 15px 20px;
+	padding: 15px 0px;
+}
+#top-logo #university span{
+	font-weight: inherit;
 }
 #top-logo #school{
   text-shadow: 0px 3px 5px rgb(0, 0, 0);
-	padding: 0px 20px;
+	padding: 0px;
 }
 #contactInfo{
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	margin-top:30px;
 	height: 5 68px;
 	background-color:#222;
 }
@@ -279,16 +283,32 @@ body{
 	text-decoration: none;
 }
 
-@media (max-width: 767px) {
-	#top-menu-btn{
-		position: absolute;
+@media (max-width: 1199px) {
+	#top-logo #school{
+		font-size: 30px;
+	}
+	#top-menu a{
 		color: #DDDDDD;
 		font-size: 18px;
-		top: 4px;
-		right: 5px;
+		font-weight: normal;
+		line-height: 30px;
+		margin: 0px 2px;
+	}
+}
+@media (max-width: 991px) {
+	#top-logo #school{
+		font-size: 30px;
+	}
+	#top-menu-btn{
+		position: absolute;
+		top: 6px;
+		right: 10px;
+		color: #DDDDDD;
+		font-size: 18px;
 		display: block;
 		z-index: 11;
 		padding: 10px;
+	  transition: color .3s;
 	}
 	#top-menu-btn:hover{
 		cursor: pointer;
@@ -303,57 +323,68 @@ body{
 		z-index: 11;
 		display: none;
 	}
+	#top-menu-mask{
+		position: fixed;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		bottom: 0px;
+		z-index: -1;
+		background: rgba(0, 0, 0, 0);
+	  transition: all .3s;
+	}
 	#top-menu{
 		position: fixed;
 		top: 0px;
-		left: 0px;
+		right: -300px;
 		margin: 0px;
 		z-index: 10;
 		padding: 60px 0px;
-		background-color: rgba(0, 0, 0, 0);
-		height: 0px;
-		width: 0px;
 		overflow: hidden;
+		background-color: rgba(238, 238, 238, 0.9);
+		width: 300px;
+		height: 100%;
+	  transition: all .3s;
 	}
 	#top-menu li{
-		border-bottom: 1px solid #DDDDDD;
+		border-bottom: 1px solid #333333;
 		text-align: center;
 		width: 50%;
 		float: left;
+		padding: 5px 0px;
 	}
 	#top-menu a{
-		font-size: 22px;
+		color: #333333;
+		font-size: 16px;
 		font-weight: normal;
 		width: 100%;
 		height: 100%;
 		display: block;
 		padding: 20px 0px;
 	}
+	body.mobile-menu-enabled{
+		/*margin-left: -300px;
+		margin-right: 300px;*/
+	}
 	body.mobile-menu-enabled #top-menu-btn{
 		position: fixed;
-		top: 10px;
-		right: 20px;
+		top: 12px;
+		right: 26px;
+		color: #333333;
+	}
+	body.mobile-menu-enabled #top-menu-mask{
+		right: 300px;
+		background: rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		display: block;
 	}
 	body.mobile-menu-enabled #top-menu{
 		display: block;
-		background-color: rgba(0, 0, 0, 0.8);
-		width: 100%;
-		height: 100%;
-		transition: background-color .15s ease-out;
+		right: 0px;
+		box-shadow: -20px 0px 100px rgba(0, 0, 0, 0.6);
 	}
 	body.mobile-menu-enabled #top-menu-logo{
-		display: block;
-	}
-	#top-logo{
-		top: 4px;
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	#top-logo h1{
-		color: #DDDDDD;
-	}
-	#top-logo #university{
-		font-size: 18px;
+		/*display: block;*/
 	}
 	#top-logo #school{
 		font-size: 24px;
@@ -365,21 +396,29 @@ body{
 	#contactInfo h2 span{
 		font-size:10px;
 	}
-}
-@media (max-width: 992px) {
-	#top-logo #school{
-		font-size: 30px;
+	#contactInfo .info-right{
+		margin: 0px 0px 50px 0px;
+		padding: 0px 50px 50px 50px;
+	}
+	#root-with-right-menu-menu{
+		margin-top: 0px;
+		background: rgba(0, 64, 152, 0.6);
 	}
 	#root-with-right-menu-menu > ul{
 		margin-top: 0px;
 	}
 	#root-with-right-menu-menu > ul > li > a{
-		font-size: 20px;
+		text-align: left;
 	}
 	#root-with-right-menu-menu > ul > li > ul > li{
 		font-size: 16px;
-		width: 50%;
-		float: left;
+		width: 32%;
+		display: inline-block;
+		box-sizing:border-box;;
 	}
-
+}
+@media (max-width: 767px) {
+	#root-with-right-menu-menu > ul > li > ul > li{
+		width: 100%;
+	}
 }
