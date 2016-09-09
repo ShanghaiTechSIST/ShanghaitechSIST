@@ -46,12 +46,16 @@ INSTALLED_APPS = (
     'sekizai',  # for javascript and css management
     'djangocms_admin_style',  # for the admin skin. You **must** add 'djangocms_admin_style' in the list **before** 'django.contrib.admin'.
 
+
+    'easy_thumbnails',
+    'filer',
+    'mptt',
+
     'djangocms_text_ckeditor',
     'djangocms_picture',
-    'djangocms_file',
+    # 'djangocms_file',
     'djangocms_timerange',
     'djangocms_plaintext',
-    'easy_thumbnails',
     'djangocms_unitegallery',
 
     'shanghaitech_SIST',
@@ -150,9 +154,28 @@ WSGI_APPLICATION = 'shanghaitech_SIST.wsgi.application'
 LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
+    ('zh-hans', '中文'),
     ('en', 'English'),
-    ('zh', '中文'),
 ]
+
+CMS_LANGUAGES = {
+    1: [
+        {
+            'code': 'en',
+            'name': 'English',
+        },
+        {
+            'code': 'zh',
+            'name': '中文',
+        },
+    ],
+    'default': {
+        'fallbacks': ['en', 'zh'],
+        'redirect_on_fallback':True,
+        'public': True,
+        'hide_untranslated': False,
+    }
+}
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -174,20 +197,12 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
-# CKEditor Configuration
-
 TEXT_SAVE_IMAGE_FUNCTION = None
-
-CMS_CACHE_DURATIONS = {
-    'content': 1,
-    'menus': 1,
-    'permissions': 1,
-}
 
 CMS_PLACEHOLDER_CONF = {
     'article.html article_content': {
         'name' : 'article_content',
-        'plugins': ['GalleryPlugin, TextPlugin'],
+        'plugins': ['GalleryPlugin', 'TextPlugin'],
         'default_plugins':[
             {
                 'plugin_type':'TextPlugin',
@@ -314,5 +329,15 @@ CMS_PLACEHOLDER_CONF = {
         ]
     },
 }
+
+THUMBNAIL_HIGH_RESOLUTION = True
+
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    #'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
 
 from .CONFIG import *

@@ -5,7 +5,8 @@ MAINTAINER eastpiger @ Geek Pie Association
 EXPOSE 80
 
 RUN apt-get update && apt-get install nginx libjpeg-dev -y
-RUN pip3 install mysqlclient gunicorn django-cms djangocms-text-ckeditor djangocms-picture djangocms-file easy-thumbnails
+RUN pip install --upgrade pip
+RUN pip3 install mysqlclient gunicorn django-cms djangocms-text-ckeditor djangocms-picture djangocms-file easy-thumbnails django-filer
 
 RUN mkdir /logs
 RUN mkdir /shanghaitechSIST
