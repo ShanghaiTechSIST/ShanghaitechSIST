@@ -22,8 +22,8 @@
 	text-decoration: none;
 }
 .list-block{
-	padding: 10px;
-	border-bottom: #EEEEEE solid 1px;
+	padding: 30px 10px 30px 10px;
+	border-bottom: #DDDDDD solid 1px;
 	transition: all .3s;
 }
 .list-block:hover{
@@ -32,8 +32,8 @@
 }
 
 .list-block-news{
-	padding: 5px 10px 10px 10px;
-	border-bottom: #EEEEEE solid 1px;
+	padding: 5px 10px 30px 10px;
+	border-bottom: #DDDDDD solid 1px;
 }
 .list-block-news:hover{
 	background-color: #EEEEEE;
@@ -41,10 +41,32 @@
 }
 .list-block-news h4{
 	padding: 12px 0px;
-    font-size: 20px;
+  font-size: 20px;
 }
 .list-block-news:hover h4{
 	color: #004098;
+}
+.list-block-img{
+	width: 240px;
+	height: 160px;
+	overflow: hidden;
+	display: block;
+	float: left;
+	position: relative;
+	margin-right: 10px;
+}
+.list-block-content{
+	display: block;
+	position: relative;
+}
+.list-block-img:empty{
+	display: none;
+	float: none;
+}
+.list-block-img img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 .list-block-news:nth-last-child(1){
 	border-bottom: none;
@@ -82,6 +104,7 @@
 .list-block-overview{
 	margin-top: 10px;
 	margin-bottom: 10px;
+	padding: 10px 10px;
 }
 .list-block-overview:hover{
 	background: transparent;
@@ -110,4 +133,11 @@
 .list-block-overview-people-inner .list-block-people-photo img{
 	width: 100%;
 	height: auto;
+}
+
+
+@media (max-width: 767px) {
+	.list-block-img{
+		display: none;
+	}
 }

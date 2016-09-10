@@ -101,6 +101,7 @@ body{
 	cursor: pointer;
 }
 #home-news-overview h3{
+	position: relative;
 	padding: 20px;
 	margin: -64px 0px 0px 0px;
 	height: 64px;
@@ -119,8 +120,15 @@ body{
 #home-news-overview .home-news-overview-img{
 	width: 100%;
 	height: 400px;
-	background-size: contain;
-	background: no-repeat center center;
+	overflow: hidden;
+	position: relative;
+	background: url("/static/image/bg.jpg") center center no-repeat;
+	background-size: cover;
+}
+#home-news-overview .home-news-overview-img img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 .home-news-block  a{
 	color: #333333;
@@ -165,7 +173,7 @@ body{
 	top: 0px;
 	right: 0px;
 	left: 0px;
-	bottom: 180px;
+	bottom: 300px;
 }
 #home-seminars .container{
 	position: relative;
@@ -174,7 +182,7 @@ body{
 	position: absolute;
 	left: 0px;
 	margin: 0px;
-	bottom: 0px;
+	bottom: 60px;
 	color: #cacaca;
 	font-size: 110px;
 	font-style: italic;

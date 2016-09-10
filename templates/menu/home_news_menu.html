@@ -4,9 +4,12 @@
 
 {% for child in children|slice:"-5:"|slice:"::-1" %}
 	{% if forloop.first %}
+		{% show_placeholder_as "article_thumbnail" child.id as article_thumbnail %}
 		<div class="col-xs-12 col-md-7" id="home-news-overview">
 			<div class="row clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
-				<div class="home-news-overview-img" style="background-image:url(http://www.shanghaitech.edu.cn/upload/image/20160906/0946195735.jpg)"></div>
+				<div class="home-news-overview-img">
+					{{article_thumbnail}}
+				</div>
 				<h3>{{ child.get_menu_title }}</h3>
 			</div>
 		</div>

@@ -202,6 +202,13 @@ MEDIA_URL = "/media/"
 TEXT_SAVE_IMAGE_FUNCTION = None
 
 CMS_PLACEHOLDER_CONF = {
+    'article.html article_thumbnail': {
+        'name' : 'article_thumbnail',
+        'plugins': ['PicturePlugin'],
+        'limits': {
+            'PicturePlugin': 1,
+        },
+    },
     'article.html article_content': {
         'name' : 'article_content',
         'plugins': ['GalleryPlugin', 'TextPlugin'],

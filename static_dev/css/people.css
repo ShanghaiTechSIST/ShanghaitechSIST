@@ -9,8 +9,20 @@
 }
 #people_brefintro.edit_mode{
 	display: block;
-	border: 1px solid black;
+}
+#people_brefintro{
+	background: rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 	border-radius: 4px;
-	padding: 10px;
-	margin: 10px;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+#people_brefintro_title{
+	margin: -20px;
+	padding: 20px 10px;
+	text-align: center;
+	background: rgba(0, 64, 152, 0.8);
+	color: white;
 }

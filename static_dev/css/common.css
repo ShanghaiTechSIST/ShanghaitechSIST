@@ -404,6 +404,9 @@ body{
 		margin-top: 0px;
 		background: rgba(0, 64, 152, 0.6);
 	}
+	#root-with-right-menu-menu:hover{
+		padding: 0px;
+	}
 	#root-with-right-menu-menu > ul{
 		margin-top: 0px;
 	}

@@ -17,7 +17,12 @@
 		</div>
 		<div class="col-md-12" id="article-content">
 			{% block article_content %}
-			{% placeholder 'article_content' %}
+				<div id="article_thumbnail" class="{% if request.toolbar.edit_mode %}edit_mode{% endif %}">
+					<h4 id="article_thumbnail_title">Article Thumbnail ( for menu or leave blank )</h4>
+					<hr/>
+					{% placeholder 'article_thumbnail' %}
+				</div>
+				{% placeholder 'article_content' %}
 			{% endblock %}
 		</div>
 	</div>
