@@ -342,4 +342,8 @@ THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.filters',
 )
 
+CKEDITOR_SETTINGS = {
+    'skin': 'office2013',
+}
+
 from .CONFIG import *

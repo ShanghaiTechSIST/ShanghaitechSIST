@@ -19,8 +19,13 @@
 	font-size: 14px;
 }
 #article-content img{
-	width: 100%;
+	max-width: 100%;
 	height: auto;
-	padding: 5%;
+	padding: 10px;
 }
-
+#article-content img[float="left"]{
+	float: left;
+}
+#article-content img[float="right"]{
+	float: right;
+}
