@@ -6,7 +6,7 @@
 {% show_placeholder_as "people_name" child.id as people_name %}
 {% show_placeholder_as "people_photo" child.id as people_photo %}
 {% show_placeholder_as "people_profile" child.id as people_profile %}
-{% show_placeholder_as "people_brefintro" child.id as people_brefintro %}
+{% show_placeholder_as "people_briefintro" child.id as people_briefintro %}
 <div class="col-md-12 list-block list-block-people clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
 	<div class="row">
 		<div class="col-xs-12"><h4>{{ people_name }}</h4></div>
@@ -14,7 +14,7 @@
 			{{ people_photo }}
 		</div>
 		<div class="col-xs-10">
-			{{ people_brefintro }}
+			{{ people_briefintro }}
 		</div>
 	</div>
 </div>

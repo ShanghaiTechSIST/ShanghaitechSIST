@@ -313,8 +313,8 @@ CMS_PLACEHOLDER_CONF = {
             },
         ]
     },
-    'people.html people_brefintro': {
-        'name' : 'people_brefintro',
+    'people.html people_briefintro': {
+        'name' : 'people_briefintro',
         'plugins': ['TextPlugin'],
         'default_plugins':[
             {

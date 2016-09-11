@@ -4,7 +4,7 @@
 * @Last Modified by:   eastpiger
 * @Last Modified time: 2016-06-22 02:44:51
 */
-#people_brefintro{
+#people_briefintro{
 	display: none;
 	background: rgba(0, 0, 0, 0.05);
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -14,10 +14,10 @@
 	border-radius: 5px;
 	overflow: hidden;
 }
-#people_brefintro.edit_mode{
+#people_briefintro.edit_mode{
 	display: block;
 }
-#people_brefintro_title{
+#people_briefintro_title{
 	margin: -20px;
 	padding: 20px 10px;
 	text-align: center;
