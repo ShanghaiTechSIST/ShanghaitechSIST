@@ -4,7 +4,7 @@
 * @Last Modified by:   eastpiger
 * @Last Modified time: 2016-01-27 18:38:29
 */
-@import url(https://fonts.googleapis.com/css?family=Lato);
+/*@import url(https://fonts.googleapis.com/css?family=Lato);*/
 *, h1, h2, h3, h4, h5, h6{
 	/*font-weight: 200;*/
 	font-family:
@@ -108,11 +108,14 @@ body{
 	float: none;
   transition: all .3s;
 }
+#top-menu li.pull-left{
+	margin-left: -15px;
+}
 #top-menu li:hover{
 	background: rgba(0, 0, 0, 0.2);
-	cursor: pointer;
 }
 #top-logo{
+	margin-top: 60px;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -121,19 +124,34 @@ body{
 #top-logo h1{
 	color: #DDDDDD;
 }
-#top-logo #university{
+#university-sm,
+#university{
 	font-size: 20px;
-	margin: 0px;
-  display: inline-block;
+	margin: 0px 10px;
+	color: #DDDDDD;
 	line-height: 30px;
-	padding: 15px 0px;
 }
-#top-logo #university span{
+#university-sm{
+	height: 60px;
+	padding: 15px;
+	margin: 0px;
+	margin-left: -15px;
+	display: none;
+  transition: all .3s;
+}
+#university-sm:hover{
+	background: rgba(0, 0, 0, 0.2);
+}
+#university-sm span,
+#university span{
 	font-weight: inherit;
 }
 #top-logo #school{
+	height: 94px;
+	line-height: 1;
   text-shadow: 0px 3px 5px rgb(0, 0, 0);
-	padding: 0px;
+	padding-top: 30px;
+	margin: 0px;
 }
 #contactInfo{
 	font-family: Georgia, 'Times New Roman', Times, serif;
@@ -288,17 +306,6 @@ body{
 #root-with-right-menu-menu > ul > li > ul{
 	padding: 0px;
 }
-#root-with-right-menu-menu > ul > li > ul > li:before{
-	content: "〇";
-	margin-right: 5px;
-}
-#root-with-right-menu-menu > ul > li > ul > li.selected:before{
-	content: "▶";
-}
-#root-with-right-menu-menu > ul > li > ul > li{
-  padding-left: 30px;
-	line-height: 60px;
-}
 #root-with-right-menu-menu > ul > li > ul > li:hover{
 	background: rgba(255, 255, 255, 0.1);
 	cursor: pointer;
@@ -310,6 +317,16 @@ body{
 	letter-spacing: 3px;
 	color: white;
 	text-decoration: none;
+	padding: 25px 10px 25px 40px;
+	display: block;
+}
+#root-with-right-menu-menu > ul > li > ul > li > a:before{
+	content: "〇";
+	margin-left: -26px;
+	margin-right: 10px;
+}
+#root-with-right-menu-menu > ul > li > ul > li.selected > a:before{
+	content: "▶";
 }
 
 @media (max-width: 1199px) {
@@ -391,6 +408,12 @@ body{
 		display: block;
 		padding: 20px 0px;
 	}
+	#top-menu li.pull-left{
+		display: none;
+	}
+	#university-sm{
+		display: inline-block;
+	}
 	body.mobile-menu-enabled{
 		/*margin-left: -300px;
 		margin-right: 300px;*/
@@ -417,7 +440,6 @@ body{
 	}
 	#top-logo #school{
 		font-size: 24px;
-		line-height: 30px;
 	}
 	#contactInfo{
 		margin-top: 260px;

@@ -139,7 +139,7 @@ body{
 .home-news-block{
 	height: 100px;
 	padding: 0px 10px 10px 30px;
-	background-color: rgba(0, 0, 0, 0.02);
+	background-color: rgba(0, 0, 0, 0.05);
 	transition: all .3s;
 }
 .home-news-block:hover{
