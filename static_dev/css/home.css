@@ -97,9 +97,6 @@ body{
 #home-news-overview{
 	transition: all .3s;
 }
-#home-news-overview:hover{
-	cursor: pointer;
-}
 #home-news-overview h3{
 	position: relative;
 	padding: 20px;
@@ -148,7 +145,6 @@ body{
 .home-news-block:hover{
 	width: 103%;
 	background-color: rgba(0, 0, 0, 0.1);
-	cursor: pointer;
 }
 .home-news-block h4{
 	padding: 12px 0px;
@@ -210,7 +206,6 @@ body{
 	background: rgba(249, 249, 249, 0.8);
 }
 .home-seminars-block:hover{
-	cursor: pointer;
 	background: rgba(249, 249, 249, 0.9);
 	margin-left: 10px;
 }

@@ -14,7 +14,8 @@
 		<meta name="description" content="Welcome to ShanghaiTech University The School of Information Science and Technology (SIST) home page, Students, Faculty, Staff, Partners, and the general public can use this site to find information on campus news, services, events, and resources posted on the campus web">
 
 		<title>{% page_attribute "page_title" %} - School of Information Science and Technology</title>
-		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+		<link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
+		<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
 		<link href="{% static "css/common.css" %}" rel="stylesheet">
 		{% block root_css %}{% endblock %}
 
@@ -80,37 +81,50 @@
 					<div class="col-xs-12 contactInfo-body">
 						<div class="row">
 							<div class="col-md-5 info-left">
-								<div class="info-content">
-									<span>Gelleris</span>
+								<div class="info-content clickbox" href="{% page_url "gallery" %}">
+									<h3>{% page_attribute "page_title" "gallery" %}</h3>
 								</div>
 							</div>
-							<div class="col-xs-2 info-mid">
-							</div>
-							<div class="col-md-5 info-right">
+							<div class="col-md-6 col-md-offset-1 info-right">
 								<div class="contact-info">
-									<h3>Contact Us</h3>
+									<h3>联系我们</h3>
 									<div class="contact-info-hr"><hr></div>
-									<div class="contact-info-item"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp;+86-21-54201291</div>
-									<div class="contact-info-item"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Xueying@shanghaitech.edu.cn</div>
-									<div class="contact-info-item"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;319 Yueyang Road, Shanghai 200031, China</div>
-									<div class="contact-info-item"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;100 Haike Road, Pudong, Shanghai 201210, China</div>
+									<div class="contact-info-item">
+											<i class="fa fa-phone"></i> &nbsp;&nbsp;+86-21-54201291</div>
+									<div class="contact-info-item">
+										<i class="fa fa-envelope"></i> &nbsp;&nbsp;Xueying@shanghaitech.edu.cn</div>
+									<div class="contact-info-item">
+										<i class="fa fa-map-marker"></i>
+										&nbsp;&nbsp;上海市徐汇区岳阳路319号8号楼 邮编：200031（岳阳路校区）</div>
+									<div class="contact-info-item">
+										<i class="fa fa-map-marker"></i>
+										&nbsp;&nbsp;上海市浦东新区海科路100号 邮编：201210（张江校区）</div>
 								</div>
 
 								<div class="social-info">
-									<h3>Social Media</h3>
+									<h3>社交媒体</h3>
 									<div class="contact-info-hr"><hr></div>
 									<div class="contact-info-item">
+										<a href="[full link to QQ]">
+											<i class="fa fa-qq fa-3x"></i>
+										</a>
+										<a href="[full link to WeChat]">
+											<i class="fa fa-wechat fa-3x"></i>
+										</a>
+											<a href="[full link to Weibo]">
+												<i class="fa fa-weibo fa-3x"></i>
+											</a>
 										<a href="[full link to Twitter]">
-											<img title="Twitter" alt="Twitter" src="/static/image/twitter1.png"/>
+											<i class="fa fa-twitter fa-3x"></i>
 										</a>
 										<a href="[full link to LinedIN]">
-											<img title="LinedIN" alt="LinedIN" src="/static/image/linkedin1.png"/>
+											<i class="fa fa-linkedin fa-3x"></i>
 										</a>
 										<a href="[full link to Facebook]">
-											<img title="Facebook" alt="Facebook" src="/static/image/facebook1.png"/>
+											<i class="fa fa-facebook fa-3x"></i>
 										</a>
 										<a href="[full link to Rss]">
-											<img title="Rss" alt="Rss" src="/static/image/rss1.png"/>
+											<i class="fa fa-rss fa-3x"></i>
 										</a>
 									</div>
 								</div>
@@ -118,42 +132,55 @@
 						</div>
 					</div>
 				</div>
-				{% else %}
+			{% else %}
 				<div class="row">
 					<div class="col-xs-12 contactInfo-body">
 						<div class="row">
 							<div class="col-md-5 info-left">
 								<div class="info-content">
-									<span>Galleris</span>
+									<h3>{% page_attribute "page_title" "gallery" %}</h3>
 								</div>
 							</div>
-							<div class="col-xs-2 info-mid">
-							</div>
-							<div class="col-md-5 info-right">
+							<div class="col-md-6 col-md-offset-1 info-right">
 								<div class="contact-info">
 									<h3>Contact Us</h3>
 									<div class="contact-info-hr"><hr></div>
-									<div class="contact-info-item"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp;+86-21-54201291</div>
-									<div class="contact-info-item"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Xueying@shanghaitech.edu.cn</div>
-									<div class="contact-info-item"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;319 Yueyang Road, Shanghai 200031, China</div>
-									<div class="contact-info-item"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;100 Haike Road, Pudong, Shanghai 201210, China</div>
+									<div class="contact-info-item">
+											<i class="fa fa-phone"></i> &nbsp;&nbsp;+86-21-54201291</div>
+									<div class="contact-info-item">
+										<i class="fa fa-envelope"></i> &nbsp;&nbsp;Xueying@shanghaitech.edu.cn</div>
+									<div class="contact-info-item">
+										<i class="fa fa-map-marker"></i>
+										&nbsp;&nbsp;319 Yueyang Road, Shanghai 200031, China</div>
+									<div class="contact-info-item">
+										<i class="fa fa-map-marker"></i>
+										&nbsp;&nbsp;100 Haike Road, Pudong, Shanghai 201210, China</div>
 								</div>
 
 								<div class="social-info">
 									<h3>Social Media</h3>
 									<div class="contact-info-hr"><hr></div>
 									<div class="contact-info-item">
+										<a href="[full link to QQ]">
+											<i class="fa fa-qq fa-3x"></i>
+										</a>
+										<a href="[full link to WeChat]">
+											<i class="fa fa-wechat fa-3x"></i>
+										</a>
+											<a href="[full link to Weibo]">
+												<i class="fa fa-weibo fa-3x"></i>
+											</a>
 										<a href="[full link to Twitter]">
-											<img title="Twitter" alt="Twitter" src="/static/image/twitter1.png"/>
+											<i class="fa fa-twitter fa-3x"></i>
 										</a>
 										<a href="[full link to LinedIN]">
-											<img title="LinedIN" alt="LinedIN" src="/static/image/linkedin1.png"/>
+											<i class="fa fa-linkedin fa-3x"></i>
 										</a>
 										<a href="[full link to Facebook]">
-											<img title="Facebook" alt="Facebook" src="/static/image/facebook1.png"/>
+											<i class="fa fa-facebook fa-3x"></i>
 										</a>
 										<a href="[full link to Rss]">
-											<img title="Rss" alt="Rss" src="/static/image/rss1.png"/>
+											<i class="fa fa-rss fa-3x"></i>
 										</a>
 									</div>
 								</div>
@@ -167,10 +194,15 @@
 		<div id="footer">
 			<div class="container">
 			{% ifequal LANGUAGE_CODE 'zh' %}
+				<div class="row">
+					<div class="col-xs-12 footer-end">
+						<span>Copyright © 2016 上海科技大学 · 版权所有 </span>
+					</div>
+				</div>
 				{% else %}
 				<div class="row">
 					<div class="col-xs-12 footer-end">
-						<span><br class="visible-xs-block" /> Copyright © 2016 ShanghaiTech University · All rights reserved </span>
+						<span>Copyright © 2016 ShanghaiTech University · All rights reserved </span>
 					</div>
 				</div>
 			{% endifequal %}

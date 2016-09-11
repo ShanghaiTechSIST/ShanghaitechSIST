@@ -5,31 +5,29 @@
 * @Last Modified time: 2016-01-27 18:38:29
 */
 @import url(https://fonts.googleapis.com/css?family=Lato);
-*{
+*, h1, h2, h3, h4, h5, h6{
 	/*font-weight: 200;*/
 	font-family:
-		-apple-system,            // OSX ^10.11 & iOS ^9  San Francisco & 苹方
+		-apple-system,
 
-		// English First
-		"Helvetica Neue",         // OSX
-		"Arial",                  // Win "Helvetica"
-		//" Segoe UI",            // Win ^8
+		"Helvetica Neue",
+		"Arial",
+		" Segoe UI",
 
-		// Chinese Fallback
-		"PingFang SC",            // OSX ^10.11 & iOS ^9  苹方（华康信凭黑）
-		"Hiragino Sans GB",       // OSX ^10.6            冬青黑体
-		"STHeiti",                // OSX <10.6  & iOS <9  华文黑体
-		"Microsoft YaHei",        // Win                  微软雅黑
-		"Microsoft JhengHei",     // Win                  微软正黑
-		"Source Han Sans SC",     // SourceHan - begin    思源黑体
+		"PingFang SC",
+		"Hiragino Sans GB",
+		"STHeiti",
+		"Microsoft YaHei",
+		"Microsoft JhengHei",
+		"Source Han Sans SC",
 		"Noto Sans CJK SC",
 		"Source Han Sans CN",
 		"Noto Sans SC",
 		"Source Han Sans TC",
-		"Noto Sans CJK TC",       // SourceHan - end
-		"WenQuanYi Micro Hei",    // Linux                文泉驿微米黑
-		SimSun,                   // Win old              中易宋体
-		sans-serif;               // System Fallback
+		"Noto Sans CJK TC",
+		"WenQuanYi Micro Hei",
+		SimSun,
+		sans-serif;
 }
 a{
 	text-decoration: none;
@@ -42,6 +40,9 @@ body{
 	background: #FAFAFA;
 	background-size: contain;
   transition: all .3s;
+}
+.clickbox:hover{
+	cursor: pointer;
 }
 .subtitle a{
 	font-size: 30px;
@@ -139,6 +140,9 @@ body{
 	height: 5 68px;
 	background-color:#222;
 }
+#contactInfo .container{
+	padding:100px 50px;
+}
 #contactInfo h2{
 	color: #DDDDDD;
 	font-weight: lighter;
@@ -155,21 +159,30 @@ body{
 	font-weight: lighter;
 	font-size:14px;
 }
-#contactInfo .info-left{
-	padding:50px;
-}
 #contactInfo .info-left .info-content{
-	margin:50px 0;
 	height:368px;
 	text-align: center;
 	vertical-align: middle;
 	font-size: 30px;
 	background: url("/static/image/river.jpg") no-repeat;
 	background-size: cover;
+	position: relative;
 }
-
-#contactInfo .info-right{
-	margin-top:100px;
+#contactInfo .info-left .info-content h3{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0px;
+	padding: 20px;
+	height: 64px;
+	background: rgba(0, 64, 152, 0.6);
+	color: white;
+	transition: all .3s;
+}
+#contactInfo .info-left .info-content:hover h3{
+	padding: 25px 20px;
+	height: 90px;
 }
 #contactInfo .info-right h3{
 	color: #DDDDDD;
@@ -196,23 +209,39 @@ body{
 	line-height: 200%;
 	vertical-align: middle;
 }
+#contactInfo .contact-info-item i{
+	width: 20px;
+	text-align: center;
+}
 #contactInfo .social-info{
 	margin-top:50px;
 }
 
-#contactInfo .social-info img{
-	width:50px;
-	height:50px;
-	margin:0 5px;
+#contactInfo .social-info a{
+	font-size: 50px;
 }
-
-
+#contactInfo .social-info a:hover{
+	text-decoration: none;
+}
+#contactInfo .social-info a:hover i{
+	background: rgba(255, 255, 255, 0.2);
+}
+#contactInfo .social-info i{
+	width:60px;
+	height:60px;
+	color: #DDDDDD;
+	padding: 5px;
+	font-size: 40px;
+	line-height: 50px;
+	vertical-align: center;
+	text-align: center;
+	transition: all .3s;
+}
 
 #footer{
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	/*background: url("/static/image/bg.jpg") center center no-repeat;*/
-	/*background:-webkit-linear-gradient(top,#0a5299 0%, #083d73 100%);*/
 	background-color:#333;
+	font-weight: lighter;
 }
 
 #footer .footer-end{
@@ -390,15 +419,23 @@ body{
 		font-size: 24px;
 		line-height: 30px;
 	}
+	#contactInfo{
+		margin-top: 260px;
+	}
+	#contactInfo .container{
+		padding:100px 0px;
+	}
+	#contactInfo .info-left{
+		margin-bottom: 50px;
+	}
+	#contactInfo .info-left .info-content{
+		margin-top: -200px;
+	}
 	#contactInfo h2{
 		font-size: 16px;
 	}
 	#contactInfo h2 span{
 		font-size:10px;
-	}
-	#contactInfo .info-right{
-		margin: 0px 0px 50px 0px;
-		padding: 0px 50px 50px 50px;
 	}
 	#root-with-right-menu-menu{
 		margin-top: 0px;
@@ -423,5 +460,11 @@ body{
 @media (max-width: 767px) {
 	#root-with-right-menu-menu > ul > li > ul > li{
 		width: 100%;
+	}
+	#contactInfo .container{
+		padding:100px 40px;
+	}
+	#contactInfo .info-left .info-content{
+		height: 200px;
 	}
 }

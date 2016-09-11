@@ -28,7 +28,6 @@
 }
 .list-block:hover{
 	background-color: #EEEEEE;
-	cursor: pointer;
 }
 
 .list-block-news{
@@ -37,7 +36,6 @@
 }
 .list-block-news:hover{
 	background-color: #EEEEEE;
-	cursor: pointer;
 }
 .list-block-news h4{
 	padding: 12px 0px;
