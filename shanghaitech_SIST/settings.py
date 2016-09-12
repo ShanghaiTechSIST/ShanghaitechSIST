@@ -175,7 +175,7 @@ CMS_LANGUAGES = {
         'fallbacks': ['en', 'zh'],
         'redirect_on_fallback':True,
         'public': True,
-        'hide_untranslated': False,
+        'hide_untranslated': True,
     }
 }
 
