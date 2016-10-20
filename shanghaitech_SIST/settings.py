@@ -53,7 +53,7 @@ INSTALLED_APPS = (
 
     'djangocms_text_ckeditor',
     'djangocms_picture',
-    # 'djangocms_file',
+    'djangocms_file',
     'djangocms_timerange',
     'djangocms_plaintext',
     'djangocms_unitegallery',
@@ -211,7 +211,7 @@ CMS_PLACEHOLDER_CONF = {
     },
     'article.html article_content': {
         'name' : 'article_content',
-        'plugins': ['GalleryPlugin', 'TextPlugin'],
+        'plugins': ['GalleryPlugin', 'TextPlugin', 'FilePlugin'],
         'default_plugins':[
             {
                 'plugin_type':'TextPlugin',
