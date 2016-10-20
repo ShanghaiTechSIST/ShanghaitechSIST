@@ -236,8 +236,8 @@ CMS_PLACEHOLDER_CONF = {
         ]
     },
     'newsletter.html article_content': {
-        'name' : 'article_date',
-        'plugins': ['TextPlugin'],
+        'name' : 'article_content',
+        'plugins': ['GalleryPlugin', 'TextPlugin', 'FilePlugin'],
         'default_plugins':[
             {
                 'plugin_type':'TextPlugin',
