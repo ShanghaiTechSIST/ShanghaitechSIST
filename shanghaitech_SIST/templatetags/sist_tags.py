@@ -2,14 +2,16 @@ from django import template
 from classytags.arguments import (Argument, MultiValueArgument,
                                   MultiKeywordArgument)
 from classytags.core import Options, Tag
-from classytags.helpers import AsTag
-from cms.templatetags.cms_tags import ShowPlaceholderById
+from classytags.helpers import AsTag, InclusionTag
+from cms.templatetags.cms_tags import _show_placeholder_by_id
 from django.core.exceptions import ImproperlyConfigured
 import math
 
 register = template.Library()
 
-class ShowPlaceholderByIdwithAS(ShowPlaceholderById):
+class ShowPlaceholderByIdwithAS(InclusionTag):
+    template = 'cms/content.html'
+    name = 'show_placeholder_by_id'
     options = Options(
         Argument('placeholder_name'),
         Argument('reverse_id'),
@@ -34,8 +36,23 @@ class ShowPlaceholderByIdwithAS(ShowPlaceholderById):
             )
         self.varname_name = last_breakpoint[-1].name
 
+    def get_context(self, *args, **kwargs):
+        try:
+            return {'content': _show_placeholder_by_id(**self.get_kwargs(*args, **kwargs))}
+        except:
+            return {'content': ''}
+
     def get_kwargs(self, context, placeholder_name, reverse_id, lang, site, varname):
-        return super().get_kwargs(context, placeholder_name, reverse_id, lang, site)
+        cache_result = True
+        if 'preview' in context['request'].GET:
+            cache_result = False
+        return {
+            'context': context,
+            'placeholder_name': placeholder_name,
+            'reverse_id': reverse_id,
+            'lang': lang,
+            'site': site,
+        }
 
     def render_tag(self, context, **kwargs):
         """
@@ -43,6 +60,7 @@ class ShowPlaceholderByIdwithAS(ShowPlaceholderById):
 
         Gets the context and data to render.
         """
+        value = super().render_tag(context, **kwargs)
         try:
             value = super().render_tag(context, **kwargs)
             varname = kwargs.pop(self.varname_name)

@@ -6,7 +6,7 @@ EXPOSE 80
 
 RUN apt-get update && apt-get install nginx libjpeg-dev -y
 RUN pip install --upgrade pip
-RUN pip3 install mysqlclient gunicorn django-cms djangocms-text-ckeditor djangocms-picture djangocms-file easy-thumbnails django-filer
+RUN pip3 install mysqlclient gunicorn django-cms==3.4.1 djangocms-text-ckeditor djangocms-picture djangocms-file easy-thumbnails django-filer
 
 RUN mkdir /logs
 RUN mkdir /shanghaitechSIST
