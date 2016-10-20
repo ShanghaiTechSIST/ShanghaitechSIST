@@ -2,7 +2,7 @@
 * @Author: eastpiger
 * @Date:   2015-11-05 15:58:41
 * @Last Modified by:   eastpiger
-* @Last Modified time: 2016-01-27 18:07:36
+* @Last Modified time: 2016-10-20 13:31:33
 */
 #article{
 }
@@ -30,6 +30,7 @@
 	float: right;
 }
 
+#article_date,
 #article_thumbnail{
 	display: none;
 	background: rgba(0, 0, 0, 0.05);
@@ -40,13 +41,16 @@
 	border-radius: 5px;
 	overflow: hidden;
 }
+#article_date.edit_mode,
 #article_thumbnail.edit_mode{
 	display: block;
 }
+#article_date img,
 #article_thumbnail img{
 	max-width: 100%;
 	height: auto;
 }
+#article_date_title,
 #article_thumbnail_title{
 	margin: -20px;
 	padding: 20px 10px;

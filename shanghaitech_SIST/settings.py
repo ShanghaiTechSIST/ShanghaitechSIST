@@ -115,12 +115,14 @@ CMS_TEMPLATES = (
     ('article.html', 'Article'),
     ('seminars.html', 'Seminars'),
     ('people.html', 'People'),
+    ('newsletter.html', 'Newsletter'),
     ('list.html', 'List'),
     ('list_news.html', 'News List'),
     ('list_seminars.html', 'Seminars List'),
     ('list_people.html', 'People List'),
     ('list_overview.html', 'Overview List'),
     ('list_overview_people.html', 'Overview_people List'),
+    ('list_newsletter.html', 'Newsletter List'),
     ('home.html', 'Home'),
 )
 
@@ -209,9 +211,33 @@ CMS_PLACEHOLDER_CONF = {
             'PicturePlugin': 1,
         },
     },
-    'article.html article_content': {
+    'article_content': {
         'name' : 'article_content',
         'plugins': ['GalleryPlugin', 'TextPlugin', 'FilePlugin'],
+        'default_plugins':[
+            {
+                'plugin_type':'TextPlugin',
+                'values':{
+                    'body':'<p>Enter your Content</p>'
+                }
+            },
+        ]
+    },
+    'newsletter.html article_date': {
+        'name' : 'article_date',
+        'plugins': ['TextPlugin'],
+        'default_plugins':[
+            {
+                'plugin_type':'TextPlugin',
+                'values':{
+                    'body':'<p>[Enter your date]</p>'
+                }
+            },
+        ]
+    },
+    'newsletter.html article_content': {
+        'name' : 'article_date',
+        'plugins': ['TextPlugin'],
         'default_plugins':[
             {
                 'plugin_type':'TextPlugin',
@@ -260,7 +286,7 @@ CMS_PLACEHOLDER_CONF = {
     },
     'seminars.html seminars_content': {
         'name' : 'seminars_content',
-        'plugins': ['TextPlugin'],
+        'plugins': ['TextPlugin', 'FilePlugin'],
         'default_plugins':[
             {
                 'plugin_type':'TextPlugin',
@@ -327,7 +353,7 @@ CMS_PLACEHOLDER_CONF = {
     },
     'people.html people_content': {
         'name' : 'people_content',
-        'plugins': ['TextPlugin'],
+        'plugins': ['TextPlugin', 'FilePlugin'],
         'default_plugins':[
             {
                 'plugin_type':'TextPlugin',

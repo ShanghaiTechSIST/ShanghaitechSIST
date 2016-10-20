@@ -1,0 +1,11 @@
+{% extends "menu/list_menu.html" %}
+{% load menu_tags %}
+{% load sist_tags %}
+
+{% block list_body %}
+{% show_placeholder_as "article_date" child.id as article_date %}
+	<div class="col-md-12 list-block clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+		<i class="fa fa-newspaper-o" aria-hidden="true"></i> {{ child.get_menu_title }}
+		<div class="pull-right">{{ article_date }}</div>
+	</div>
+{% endblock %}
