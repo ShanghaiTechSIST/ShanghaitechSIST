@@ -26,7 +26,7 @@ SECRET_KEY = 'kak^%w2j_h4#gqydh#j469z)vpafa*%=)gii7m&ny4l+6l#w-0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["sist.shanghaitech.edu.cn"]
+ALLOWED_HOSTS = ["sist.shanghaitech.edu.cn", "sistbeta.shanghaitech.edu.cn"]
 
 SITE_ID = 1
 
