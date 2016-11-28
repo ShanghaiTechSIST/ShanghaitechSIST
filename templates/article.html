@@ -24,6 +24,13 @@
 					<hr/>
 					{% placeholder 'article_thumbnail' %}
 				</div>
+				<div id="article_date" class="{% if request.toolbar.edit_mode %}edit_mode{% endif %}">
+					<h4 id="article_date_title">
+						<i class="fa fa-low-vision" aria-hidden="true"></i> Article Date ( for menu or leave blank )
+					</h4>
+					<hr/>
+					{% placeholder 'article_date' %}
+				</div>
 				{% placeholder 'article_content' %}
 			{% endblock %}
 		</div>
