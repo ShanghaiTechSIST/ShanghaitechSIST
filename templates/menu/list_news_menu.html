@@ -6,7 +6,9 @@
 {% show_placeholder_as "article_content" child.id as article_content %}
 {% show_placeholder_as "article_thumbnail" child.id as article_thumbnail %}
 <div class="col-md-12 list-block list-block-news clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
-	<h4>{{ child.get_menu_title }}</h4>
+	<h4>{{ child.get_menu_title }}
+		<div class="pull-right">{{ article_date }}</div>
+	</h4>
 	<div class="list-block-body">
 		<div class="list-block-img">{{article_thumbnail}}</div>
 		<div class="list-block-content">

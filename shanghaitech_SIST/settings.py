@@ -223,7 +223,7 @@ CMS_PLACEHOLDER_CONF = {
             },
         ]
     },
-    'newsletter.html article_date': {
+    'article_date': {
         'name' : 'article_date',
         'plugins': ['TextPlugin'],
         'default_plugins':[
