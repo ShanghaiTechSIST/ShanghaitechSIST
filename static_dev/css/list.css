@@ -2,7 +2,7 @@
 * @Author: eastpiger
 * @Date:   2015-11-05 15:58:41
 * @Last Modified by:   eastpiger
-* @Last Modified time: 2016-06-22 03:13:43
+* @Last Modified time: 2016-11-28 19:13:14
 */
 #list{
 	margin-bottom: 60px;
@@ -68,6 +68,11 @@
 }
 .list-block-news:nth-last-child(1){
 	border-bottom: none;
+}
+.list-block-news h4 .list-block-news-data *{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 25px;
 }
 
 .list-block-seminars:hover .list-seminars-time,

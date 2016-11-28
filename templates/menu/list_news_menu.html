@@ -8,7 +8,7 @@
 {% show_placeholder_as "article_date" child.id as article_date %}
 <div class="col-md-12 list-block list-block-news clickbox" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
 	<h4>{{ child.get_menu_title }}
-		<div class="pull-right">{{ article_date }}</div>
+		<div class="pull-right" class="list-block-news-data">{{ article_date }}</div>
 	</h4>
 	<div class="list-block-body">
 		<div class="list-block-img">{{article_thumbnail}}</div>
